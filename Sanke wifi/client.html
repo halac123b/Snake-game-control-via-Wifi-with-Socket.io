@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client</title>
+  <style>
+    button {
+      width: 40%;
+      height: 150px;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <button ontouchstart="sendToServer('up')">Up</button>
+  <button ontouchstart="sendToServer('down')">Down</button>
+  <button ontouchstart="sendToServer('left')">Left</button>
+  <button ontouchstart="sendToServer('right')">Right</button>
+
+  <script type="text/javascript" src="http://127.0.0.1:5500/node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    function sendToServer(direction){
+      socket.emit("direction", direction);
+    }
+  </script>
+</body>
+</html>
