@@ -4,6 +4,8 @@ Game screen seen on desktop<br>
 Control game through mobile phone<br>
 <img src="Cap2.PNG"> <br>
 <br>
+Install node_modules<br>
+`npm init` <br>
 Install package socket.io<br>
 `npm install --save socket.io` <br>
 `npm install --save socket.io-client`<br>
